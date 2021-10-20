@@ -363,23 +363,36 @@ public class UasAsrul extends javax.swing.JFrame {
         if (jmlb2 >= 50){
             hrgTotal = hrgb2 * jmlb2 - dsk1persen;
             hrgDiskon1persen = hrgb2 * dsk1persen;
-            jTh1.setText(String.valueOf(hrgTotal));
+            jTh2.setText(String.valueOf(hrgTotal));
         }
         else{
             hrgTotal = hrgb2 * jmlb1;
-            jTh1.setText(String.valueOf(hrgTotal));
+            jTh2.setText(String.valueOf(hrgTotal));
         }
         if (jmlb2 >= 50){
             hrgTotal = hrgb3 * jmlb3 - dsk1persen;
             hrgDiskon1persen = hrgb3 * dsk1persen;
-            jTh1.setText(String.valueOf(hrgTotal));
+            jTh3.setText(String.valueOf(hrgTotal));
         }
         else{
             hrgTotal = hrgb3 * jmlb1;
-            jTh1.setText(String.valueOf(hrgTotal));
+            jTh3.setText(String.valueOf(hrgTotal));
         }
         
-        
+        double tHarga1, tHarga2, tHarga3, tPembayaran, tDis5per = 0, dis5per = 0.05, results;
+                tHarga1 = Double.parseDouble(jTh1.getText());
+                tHarga2 = Double.parseDouble(jTh2.getText());
+                tHarga3 = Double.parseDouble(jTh3.getText());
+                tPembayaran = tHarga1 + tHarga2 + tHarga3;
+                jTbayar.setText(String.valueOf(tPembayaran));
+                if (tPembayaran >= 1000000) {
+                    tDis5per = tPembayaran * dis5per;
+                    jDis5persen.setText(String.valueOf(tDis5per));
+                    results = tPembayaran - tDis5per;
+                    jBayarAkhir.setText(String.valueOf(results));
+                }else{
+                    jBayarAkhir.setText(String.valueOf(tPembayaran));
+                }
     }                                      
 
     private void jHb2ActionPerformed(java.awt.event.ActionEvent evt) {                                     
