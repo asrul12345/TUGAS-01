@@ -324,7 +324,7 @@ public class UasAsrul extends javax.swing.JFrame {
            showMessageDialog( null,  "This is even shorter");   
        }
         
-        if (jmlb1 >= 50.000){
+        if (jmlb1 >= 50){
             hrgTotal = hrgb1 * jmlb1 - dsk1persen;
             hrgDiskon1persen = hrgb1 * dsk1persen;
             jTh1.setText(String.valueOf(hrgTotal));
@@ -333,22 +333,22 @@ public class UasAsrul extends javax.swing.JFrame {
             hrgTotal = hrgb1 * jmlb1;
             jTh1.setText(String.valueOf(hrgTotal));
         }
-        if (jmlb1 >= 50.000){
-            hrgTotal = hrgb1 * jmlb1 - dsk1persen;
-            hrgDiskon1persen = hrgb1 * dsk1persen;
+        if (jmlb2 >= 50){
+            hrgTotal = hrgb2 * jmlb2 - dsk1persen;
+            hrgDiskon1persen = hrgb2 * dsk1persen;
             jTh1.setText(String.valueOf(hrgTotal));
         }
         else{
-            hrgTotal = hrgb1 * jmlb1;
+            hrgTotal = hrgb2 * jmlb1;
             jTh1.setText(String.valueOf(hrgTotal));
         }
-        if (jmlb1 >= 50.000){
-            hrgTotal = hrgb1 * jmlb1 - dsk1persen;
-            hrgDiskon1persen = hrgb1 * dsk1persen;
+        if (jmlb2 >= 50){
+            hrgTotal = hrgb3 * jmlb3 - dsk1persen;
+            hrgDiskon1persen = hrgb3 * dsk1persen;
             jTh1.setText(String.valueOf(hrgTotal));
         }
         else{
-            hrgTotal = hrgb1 * jmlb1;
+            hrgTotal = hrgb3 * jmlb1;
             jTh1.setText(String.valueOf(hrgTotal));
         }
     }                                      
