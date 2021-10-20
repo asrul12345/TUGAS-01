@@ -99,6 +99,12 @@ public class UasAsrul extends javax.swing.JFrame {
             }
         });
 
+        jJb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jJb1ActionPerformed(evt);
+            }
+        });
+
         jHbd1.setEditable(false);
         jHbd1.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -165,6 +171,11 @@ public class UasAsrul extends javax.swing.JFrame {
 
         jUakhir.setEditable(false);
         jUakhir.setBackground(new java.awt.Color(204, 204, 255));
+        jUakhir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jUakhirActionPerformed(evt);
+            }
+        });
 
         jHapus.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jHapus.setText("Hapus Semua");
@@ -187,9 +198,6 @@ public class UasAsrul extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButtonuangakhir))
@@ -224,7 +232,7 @@ public class UasAsrul extends javax.swing.JFrame {
                                                 .addComponent(jJb1)
                                                 .addComponent(jJb2)
                                                 .addComponent(jJb3, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)))))
-                                .addGap(30, 49, Short.MAX_VALUE)
+                                .addGap(30, 52, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel4)
                                     .addComponent(jHbd1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -233,7 +241,7 @@ public class UasAsrul extends javax.swing.JFrame {
                                         .addComponent(jHbd2, javax.swing.GroupLayout.Alignment.LEADING)))
                                 .addGap(39, 39, 39))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap(324, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel6)
                                     .addComponent(jLabel7)
@@ -242,6 +250,7 @@ public class UasAsrul extends javax.swing.JFrame {
                                     .addComponent(jLabel10))
                                 .addGap(30, 30, 30)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTotal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 13, Short.MAX_VALUE))
@@ -322,7 +331,7 @@ public class UasAsrul extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void jBarang1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        double hrgb1 = 25.000;
+        double hrgb1 = 25000;
         if (jBarang1.isSelected()){
             jHb1.setText(String.valueOf(hrgb1));
         }
@@ -332,7 +341,7 @@ public class UasAsrul extends javax.swing.JFrame {
     }                                        
 
     private void jBarang3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        double hrgb3 = 75.000;
+        double hrgb3 = 75000;
         if (jBarang3.isSelected()){
             jHb3.setText(String.valueOf(hrgb3));
         }
@@ -355,6 +364,7 @@ public class UasAsrul extends javax.swing.JFrame {
             hrgTotal = hrgb1 * jmlb1 - dsk1persen;
             hrgDiskon1persen = hrgb1 * dsk1persen;
             jTh1.setText(String.valueOf(hrgTotal));
+            jHbd1.setText(String.valueOf(hrgDiskon1persen));
         }
         else{
             hrgTotal = hrgb1 * jmlb1;
@@ -364,15 +374,17 @@ public class UasAsrul extends javax.swing.JFrame {
             hrgTotal = hrgb2 * jmlb2 - dsk1persen;
             hrgDiskon1persen = hrgb2 * dsk1persen;
             jTh2.setText(String.valueOf(hrgTotal));
+            jHbd2.setText(String.valueOf(hrgDiskon1persen));
         }
         else{
             hrgTotal = hrgb2 * jmlb1;
             jTh2.setText(String.valueOf(hrgTotal));
         }
-        if (jmlb2 >= 50){
+        if (jmlb3 >= 50){
             hrgTotal = hrgb3 * jmlb3 - dsk1persen;
             hrgDiskon1persen = hrgb3 * dsk1persen;
             jTh3.setText(String.valueOf(hrgTotal));
+            jHbd3.setText(String.valueOf(hrgDiskon1persen));
         }
         else{
             hrgTotal = hrgb3 * jmlb1;
@@ -400,11 +412,11 @@ public class UasAsrul extends javax.swing.JFrame {
     }                                    
 
     private void jHb1ActionPerformed(java.awt.event.ActionEvent evt) {                                     
-        // TODO add your handling code here:
+    
     }                                    
 
     private void jBarang2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    double hrgb2 = 50.000;
+    double hrgb2 = 50000;
         if (jBarang2.isSelected()){
             jHb2.setText(String.valueOf(hrgb2));
         }
@@ -412,6 +424,25 @@ public class UasAsrul extends javax.swing.JFrame {
             jHb2.setText(String.valueOf("0"));
         }
     }                                        
+
+    private void jUakhirActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        double bayar, hrgsetelahdiskon, uangAkhir;
+        hrgsetelahdiskon = Double.parseDouble(jBayarAkhir.getText());
+                bayar = Double.parseDouble(jBayar.getText());
+
+                uangAkhir = bayar - hrgsetelahdiskon;
+                if (uangAkhir >= 0) {
+                    showMessageDialog(null, "Uang Kembalian : "+uangAkhir);
+                }else{
+                    showMessageDialog(null, "Uang Kurang : "+uangAkhir);
+                }
+                jUakhir.setText(String.valueOf(uangAkhir));
+        
+    }                                       
+
+    private void jJb1ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+    }                                    
 
     /**
      * @param args the command line arguments
