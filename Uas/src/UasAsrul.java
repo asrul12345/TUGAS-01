@@ -86,6 +86,11 @@ public class UasAsrul extends javax.swing.JFrame {
         });
 
         jBarang2.setText("Barang 2");
+        jBarang2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBarang2ActionPerformed(evt);
+            }
+        });
 
         jBarang3.setText("Barang 3");
         jBarang3.addActionListener(new java.awt.event.ActionListener() {
@@ -102,9 +107,19 @@ public class UasAsrul extends javax.swing.JFrame {
 
         jHb1.setEditable(false);
         jHb1.setBackground(new java.awt.Color(204, 204, 255));
+        jHb1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jHb1ActionPerformed(evt);
+            }
+        });
 
         jHb2.setEditable(false);
         jHb2.setBackground(new java.awt.Color(204, 204, 255));
+        jHb2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jHb2ActionPerformed(evt);
+            }
+        });
 
         jHb3.setEditable(false);
         jHb3.setBackground(new java.awt.Color(204, 204, 255));
@@ -307,11 +322,23 @@ public class UasAsrul extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void jBarang1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        double hrgb1 = 25.000;
+        if (jBarang1.isSelected()){
+            jHb1.setText(String.valueOf(hrgb1));
+        }
+        else{
+            jHb1.setText(String.valueOf("0"));
+        }
     }                                        
 
     private void jBarang3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        double hrgb3 = 75.000;
+        if (jBarang3.isSelected()){
+            jHb3.setText(String.valueOf(hrgb3));
+        }
+        else{
+            jHb1.setText(String.valueOf("0"));
+        }
     }                                        
 
     private void jTotalActionPerformed(java.awt.event.ActionEvent evt) {                                       
@@ -351,7 +378,27 @@ public class UasAsrul extends javax.swing.JFrame {
             hrgTotal = hrgb3 * jmlb1;
             jTh1.setText(String.valueOf(hrgTotal));
         }
+        
+        
     }                                      
+
+    private void jHb2ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+    }                                    
+
+    private void jHb1ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+    }                                    
+
+    private void jBarang2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    double hrgb2 = 50.000;
+        if (jBarang2.isSelected()){
+            jHb2.setText(String.valueOf(hrgb2));
+        }
+        else{
+            jHb2.setText(String.valueOf("0"));
+        }
+    }                                        
 
     /**
      * @param args the command line arguments
